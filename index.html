@@ -76,6 +76,18 @@ background-image:
 radial-gradient(circle at 30% 20%, rgba(255,255,255,0.08) 0%, transparent 40%),
 radial-gradient(circle at 70% 80%, rgba(0,0,0,0.2) 0%, transparent 50%);
 }
+.cover::after {
+content: ‘🍁’;
+position: absolute;
+bottom: -60px;
+right: -30px;
+font-size: 320px;
+opacity: 0.08;
+transform: rotate(25deg);
+pointer-events: none;
+z-index: 0;
+line-height: 1;
+}
 
 .maple-leaf-bg {
 position: absolute;
@@ -89,7 +101,7 @@ user-select: none;
 
 .cover-inner {
 position: relative;
-z-index: 2;
+z-index: 1;
 max-width: 900px;
 }
 
@@ -889,7 +901,35 @@ color: white;
 font-size: 14px;
 }
 
+.deco-leaf {
+position: absolute;
+pointer-events: none;
+z-index: 0;
+}
+.deco-leaf svg { display: block; }
+.deco-tl {
+top: -60px;
+left: -40px;
+width: 380px;
+height: 380px;
+transform: rotate(-15deg);
+}
+.deco-br {
+bottom: -80px;
+right: -30px;
+width: 320px;
+height: 320px;
+transform: rotate(30deg);
+}
+@media (max-width: 600px) {
+.deco-tl { width: 220px; height: 220px; top: -30px; left: -20px; }
+.deco-br { width: 180px; height: 180px; bottom: -40px; right: -10px; }
+}
+
+```
 /* ============== RESPONSIVE ============== */
+```
+
 /* Tablettes (iPad 11”, iPad 13” portrait) */
 @media (max-width: 1024px) {
 .container { padding: 0 20px; }
@@ -1354,6 +1394,16 @@ flex-shrink: 0;
 
 <section class="cover">
 
+  <div class="deco-leaf deco-tl" aria-hidden="true">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 5 L62 22 L80 15 L72 35 L92 42 L78 52 L95 65 L75 67 L68 85 L54 74 L50 95 L46 74 L32 85 L25 67 L5 65 L22 52 L8 42 L28 35 L20 15 L38 22 Z" fill="rgba(255,255,255,0.12)"/>
+    </svg>
+  </div>
+  <div class="deco-leaf deco-br" aria-hidden="true">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 5 L62 22 L80 15 L72 35 L92 42 L78 52 L95 65 L75 67 L68 85 L54 74 L50 95 L46 74 L32 85 L25 67 L5 65 L22 52 L8 42 L28 35 L20 15 L38 22 Z" fill="rgba(255,255,255,0.08)"/>
+    </svg>
+  </div>
   <div class="cover-inner">
     <div class="cover-eyebrow">Carnet de Voyage</div>
     <h1 class="cover-title">Aventure au<br><span class="accent">Québec</span></h1>
