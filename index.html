@@ -902,17 +902,17 @@ font-size: 14px;
 /* Tablettes portrait étroit / grands smartphones */
 @media (max-width: 768px) {
 .container { padding: 0 16px; }
-.timeline::before { left: 30px; }
+.timeline::before { left: 24px; }
 .day, .day:nth-child(odd), .day:nth-child(even) {
 width: 100%;
 margin-left: 0;
-padding-left: 70px;
+padding-left: 62px;
 padding-right: 0;
 text-align: left;
 }
 .day:nth-child(odd) .day-marker,
 .day:nth-child(even) .day-marker {
-left: 2px;
+left: 0px;
 right: auto;
 }
 .cover { padding: 40px 20px; }
@@ -1067,15 +1067,15 @@ color: var(–rouge-canada);
 .quicknav {
 margin: 0 auto 60px;
 padding: 28px 24px;
-background: linear-gradient(135deg, var(–blanc-neige) 0%, var(–blanc-creme) 100%);
-border: 1px solid rgba(26, 22, 18, 0.15);
+background: #f5f5f5;
+border: 1px solid #cccccc;
 border-radius: 8px;
-box-shadow: 0 8px 28px rgba(26, 22, 18, 0.08);
+box-shadow: 0 4px 16px rgba(0,0,0,0.08);
 }
 .quicknav-section + .quicknav-section {
 margin-top: 24px;
 padding-top: 24px;
-border-top: 1px dashed rgba(26, 22, 18, 0.18);
+border-top: 1px dashed #cccccc;
 }
 .quicknav-label {
 display: block;
@@ -1083,12 +1083,11 @@ font-size: 0.72rem;
 font-weight: 700;
 letter-spacing: 3px;
 text-transform: uppercase;
-color: var(–noir-encre);
+color: #111111;
 margin-bottom: 16px;
 text-align: center;
 }
-
-/* Pastilles SECTIONS — fond NOIR, texte BLANC */
+/* Pastilles SECTIONS */
 .quicknav-section:not(.days) .quicknav-pills {
 display: flex;
 flex-wrap: wrap;
@@ -1096,10 +1095,10 @@ gap: 10px;
 justify-content: center;
 }
 .quicknav-pill.main {
-text-decoration: none !important;
-background: var(–noir-encre);
-color: #ffffff !important;
-padding: 10px 20px;
+text-decoration: none;
+background: #1a1612;
+color: #ffffff;
+padding: 10px 18px;
 border-radius: 24px;
 font-size: 0.88rem;
 font-weight: 600;
@@ -1107,19 +1106,13 @@ transition: all 0.25s ease;
 display: inline-flex;
 align-items: center;
 gap: 8px;
-border: 2px solid var(–noir-encre);
-box-shadow: 0 3px 10px rgba(26, 22, 18, 0.25);
+box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
-.quicknav-pill.main * { color: #ffffff !important; }
 .quicknav-pill.main .qico { font-size: 1rem; }
-.quicknav-pill.main:hover, .quicknav-pill.main:focus {
-background: var(–rouge-canada);
-border-color: var(–rouge-canada);
-transform: translateY(-2px);
-box-shadow: 0 6px 16px rgba(213, 43, 30, 0.35);
-}
+.quicknav-pill.main .qtxt { color: #ffffff; font-weight: 600; }
+.quicknav-pill.main:hover { background: #d52b1e; transform: translateY(-2px); }
 
-/* Section JOURS — feuilles d’érable NOIRES, texte BLANC */
+/* Feuilles d’érable — JOURS */
 .quicknav-section.days .quicknav-pills {
 display: grid;
 grid-template-columns: repeat(9, 1fr);
@@ -1128,7 +1121,7 @@ max-width: 760px;
 margin: 0 auto;
 }
 .leaf-pill {
-text-decoration: none !important;
+text-decoration: none;
 aspect-ratio: 1 / 1;
 display: flex;
 flex-direction: column;
@@ -1136,38 +1129,22 @@ align-items: center;
 justify-content: center;
 padding: 4px;
 line-height: 1.1;
-background: var(–noir-encre);
-color: #ffffff !important;
+background: #1a1612;
 transition: all 0.25s ease;
-clip-path: polygon(
-50% 0%,
-62% 18%, 80% 12%,
-72% 32%, 92% 38%,
-78% 50%, 100% 60%,
-78% 64%, 70% 82%,
-55% 72%, 50% 100%,
-45% 72%, 30% 82%,
-22% 64%, 0% 60%,
-22% 50%, 8% 38%,
-28% 32%, 20% 12%,
-38% 18%
-);
-position: relative;
+clip-path: polygon(50% 0%,62% 18%,80% 12%,72% 32%,92% 38%,78% 50%,100% 60%,78% 64%,70% 82%,55% 72%,50% 100%,45% 72%,30% 82%,22% 64%,0% 60%,22% 50%,8% 38%,28% 32%,20% 12%,38% 18%);
 }
-.leaf-pill * { color: #ffffff !important; }
-.leaf-pill:hover, .leaf-pill:focus {
-background: var(–rouge-canada);
-transform: scale(1.08) rotate(-3deg);
-}
+.leaf-pill:hover { background: #d52b1e; transform: scale(1.08) rotate(-3deg); }
 .leaf-pill .leaf-day {
 font-family: ‘Playfair Display’, serif;
 font-weight: 900;
 font-size: 0.95rem;
+color: #ffffff;
 letter-spacing: 1px;
 }
 .leaf-pill .leaf-date {
 font-size: 0.62rem;
-opacity: 0.92;
+color: #ffffff;
+opacity: 0.9;
 letter-spacing: 0.5px;
 margin-top: 2px;
 }
@@ -1175,73 +1152,62 @@ margin-top: 2px;
 .day { scroll-margin-top: 20px; }
 section[id] { scroll-margin-top: 20px; }
 
+/* TABLETTE */
 @media (max-width: 1024px) {
-.quicknav-section.days .quicknav-pills {
-grid-template-columns: repeat(9, 1fr);
-gap: 6px;
-}
+.quicknav-section.days .quicknav-pills { grid-template-columns: repeat(9, 1fr); gap: 6px; }
 .leaf-pill .leaf-day { font-size: 0.85rem; }
 .leaf-pill .leaf-date { font-size: 0.58rem; }
 }
-
+/* MOBILE — grille 3×3 centré */
 @media (max-width: 600px) {
 .quicknav { padding: 20px 14px; margin-bottom: 40px; }
 .quicknav-section.days .quicknav-pills {
 grid-template-columns: repeat(3, 1fr);
-gap: 10px;
-max-width: 320px;
+gap: 12px;
+max-width: 280px;
+margin: 0 auto;
 }
-.leaf-pill .leaf-day { font-size: 1rem; }
-.leaf-pill .leaf-date { font-size: 0.7rem; }
+.leaf-pill .leaf-day { font-size: 0.95rem; }
+.leaf-pill .leaf-date { font-size: 0.65rem; }
 .quicknav-pill.main { font-size: 0.78rem; padding: 8px 14px; }
+.quicknav-section:not(.days) .quicknav-pills { justify-content: center; gap: 8px; }
 }
 
-```
 /* ============== MENU FLOTTANT ============== */
-```
-
 .float-nav {
 position: fixed;
 bottom: 22px;
 right: 22px;
-z-index: 999;
+z-index: 9999;
 }
 .float-nav-toggle {
-width: 60px;
-height: 60px;
+width: 58px;
+height: 58px;
 border-radius: 50%;
-background: var(–noir-encre);
-color: #ffffff !important;
+background: #1a1612;
+color: #ffffff;
 border: 3px solid #ffffff;
 cursor: pointer;
-box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
-font-size: 1.6rem;
-font-weight: 700;
+box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+font-size: 1.5rem;
 display: flex;
 align-items: center;
 justify-content: center;
 transition: all 0.25s ease;
-line-height: 1;
 }
-.float-nav-toggle:hover {
-transform: scale(1.08);
-background: var(–rouge-canada);
-}
-.float-nav-toggle.open {
-transform: rotate(90deg);
-background: var(–rouge-canada);
-}
+.float-nav-toggle:hover { transform: scale(1.08); background: #d52b1e; }
+.float-nav-toggle.open { transform: rotate(90deg); background: #d52b1e; }
 
 .float-nav-panel {
 position: absolute;
-bottom: 76px;
+bottom: 72px;
 right: 0;
 background: #ffffff;
-border: 2px solid var(–noir-encre);
+border: 2px solid #1a1612;
 border-radius: 12px;
-box-shadow: 0 16px 44px rgba(0, 0, 0, 0.25);
+box-shadow: 0 12px 36px rgba(0,0,0,0.22);
 padding: 18px;
-min-width: 280px;
+min-width: 270px;
 max-width: calc(100vw - 44px);
 opacity: 0;
 transform: translateY(10px) scale(0.96);
@@ -1258,10 +1224,10 @@ font-size: 0.7rem;
 font-weight: 700;
 letter-spacing: 2px;
 text-transform: uppercase;
-color: var(–noir-encre);
+color: #1a1612;
 margin-bottom: 10px;
 padding-bottom: 8px;
-border-bottom: 1px dashed rgba(26, 22, 18, 0.2);
+border-bottom: 1px dashed #cccccc;
 text-align: center;
 }
 .float-nav-title:not(:first-child) { margin-top: 14px; }
@@ -1274,28 +1240,26 @@ margin-bottom: 4px;
 .float-nav-link {
 display: flex;
 align-items: center;
-gap: 7px;
-padding: 9px 11px;
-background: var(–noir-encre);
-color: #ffffff !important;
-text-decoration: none !important;
+gap: 6px;
+padding: 9px 10px;
+background: #1a1612;
+color: #ffffff;
+text-decoration: none;
 border-radius: 6px;
-font-size: 0.8rem;
+font-size: 0.78rem;
 font-weight: 600;
 transition: all 0.2s ease;
 }
-.float-nav-link:hover {
-background: var(–rouge-canada);
-}
+.float-nav-link:hover { background: #d52b1e; }
 .float-nav-days {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
 gap: 5px;
 }
 .float-nav-day {
-text-decoration: none !important;
-background: var(–noir-encre);
-color: #ffffff !important;
+text-decoration: none;
+background: #1a1612;
+color: #ffffff;
 text-align: center;
 padding: 9px 4px;
 border-radius: 6px;
@@ -1304,94 +1268,16 @@ line-height: 1.15;
 transition: all 0.2s ease;
 font-weight: 600;
 }
-.float-nav-day * { color: #ffffff !important; }
-.float-nav-day:hover {
-background: var(–rouge-canada);
-transform: scale(1.05);
-}
+.float-nav-day:hover { background: #d52b1e; transform: scale(1.05); }
 .float-nav-day strong {
 display: block;
 font-family: ‘Playfair Display’, serif;
-font-size: 0.9rem;
+font-size: 0.88rem;
 font-weight: 900;
 margin-bottom: 1px;
-}
-.float-nav-day small {
-font-size: 0.6rem;
-opacity: 0.92;
-}
-
-/* ============== COMPTEUR ============== */
-.countdown {
-margin-top: 36px;
-padding: 18px 24px;
-background: rgba(255, 255, 255, 0.1);
-backdrop-filter: blur(8px);
--webkit-backdrop-filter: blur(8px);
-border: 1px solid rgba(255, 255, 255, 0.25);
-border-radius: 8px;
-display: inline-block;
-animation: fadeUp 1.4s ease-out 0.7s both;
-}
-.countdown-label {
-font-family: ‘Cormorant Garamond’, serif;
-font-style: italic;
-font-size: 0.95rem;
-letter-spacing: 1.5px;
-text-transform: uppercase;
-color: rgba(255, 255, 255, 0.92);
-margin-bottom: 10px;
-text-align: center;
-}
-.countdown-grid {
-display: flex;
-align-items: center;
-justify-content: center;
-gap: 12px;
-}
-.countdown-cell {
-display: flex;
-flex-direction: column;
-align-items: center;
-min-width: 60px;
-}
-.countdown-num {
-font-family: ‘Playfair Display’, serif;
-font-size: 2.4rem;
-font-weight: 900;
 color: #ffffff;
-line-height: 1;
-font-variant-numeric: tabular-nums;
 }
-.countdown-unit {
-font-size: 0.65rem;
-letter-spacing: 2.5px;
-text-transform: uppercase;
-color: rgba(255, 255, 255, 0.85);
-margin-top: 4px;
-}
-.countdown-sep {
-font-size: 1.6rem;
-color: rgba(255, 255, 255, 0.45);
-margin-bottom: 14px;
-}
-.countdown.expired {
-background: rgba(0, 0, 0, 0.25);
-border-color: rgba(255, 255, 255, 0.4);
-}
-.countdown.expired .countdown-num {
-font-size: 1.4rem;
-font-family: ‘Cormorant Garamond’, serif;
-font-style: italic;
-}
-@media (max-width: 480px) {
-.countdown { padding: 14px 16px; }
-.countdown-grid { gap: 6px; }
-.countdown-cell { min-width: 50px; }
-.countdown-num { font-size: 1.9rem; }
-.countdown-unit { font-size: 0.58rem; letter-spacing: 1.5px; }
-.countdown-sep { font-size: 1.2rem; margin-bottom: 12px; }
-}
+.float-nav-day small { font-size: 0.6rem; opacity: 0.9; color: #ffffff; }
 
 </style>
 </head>
@@ -1401,8 +1287,7 @@ font-style: italic;
 <!-- ====== COUVERTURE ====== -->
 
 <section class="cover">
-  <div class="maple-leaf-bg tl">🍁</div>
-  <div class="maple-leaf-bg br">🍁</div>
+
   <div class="cover-inner">
     <div class="cover-eyebrow">Carnet de Voyage</div>
     <h1 class="cover-title">Aventure au<br><span class="accent">Québec</span></h1>
@@ -1489,7 +1374,6 @@ font-style: italic;
     <div class="quicknav-section">
       <span class="quicknav-label">Sections</span>
       <div class="quicknav-pills">
-        <a class="quicknav-pill main" href="#haut"><span class="qico">⬆️</span><span class="qtxt">Haut</span></a>
         <a class="quicknav-pill main" href="#carte"><span class="qico">🗺️</span><span class="qtxt">La carte</span></a>
         <a class="quicknav-pill main" href="#excursions"><span class="qico">🎢</span><span class="qtxt">Activités</span></a>
         <a class="quicknav-pill main" href="#restaurants"><span class="qico">🍽️</span><span class="qtxt">Tables</span></a>
