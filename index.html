@@ -11,9 +11,9 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <style>
   :root {
-    --rouge-canada: #d52b1e;
-    --rouge-feuille: #b91c1c;
-    --rouge-sombre: #7a1418;
+    --rouge-canada: #CC0000;
+    --rouge-feuille: #AA0000;
+    --rouge-sombre: #990000;
     --blanc-neige: #fafaf7;
     --blanc-creme: #f5f1e8;
     --noir-encre: #1a1612;
@@ -62,7 +62,7 @@ justify-content: center;
 align-items: center;
 text-align: center;
 position: relative;
-background: linear-gradient(135deg, var(–rouge-canada) 0%, var(–rouge-sombre) 100%);
+background: linear-gradient(135deg, #CC0000 0%, #990000 100%);
 color: var(–blanc-neige);
 padding: 60px 24px;
 overflow: hidden;
@@ -194,7 +194,7 @@ color: #3a342e;
 font-family: ‘Playfair Display’, serif;
 font-size: 4.5rem;
 font-weight: 900;
-color: var(–rouge-canada);
+color: #CC0000;
 float: left;
 line-height: 0.85;
 margin: 6px 12px 0 0;
@@ -214,7 +214,7 @@ padding: 0 16px;
 text-align: center;
 padding: 24px 12px;
 background: var(–blanc-neige);
-border: 1px solid rgba(213, 43, 30, 0.15);
+border: 1px solid rgba(204, 0, 0, 0.15);
 border-radius: 4px;
 position: relative;
 }
@@ -226,14 +226,14 @@ top: -1px;
 left: -1px;
 right: -1px;
 height: 3px;
-background: var(–rouge-canada);
+background: #CC0000;
 }
 
 .stat-num {
 font-family: ‘Playfair Display’, serif;
 font-size: 2.6rem;
 font-weight: 900;
-color: var(–rouge-canada);
+color: #CC0000;
 line-height: 1;
 margin-bottom: 6px;
 }
@@ -255,7 +255,7 @@ text-align: center;
 font-size: 0.78rem;
 letter-spacing: 5px;
 text-transform: uppercase;
-color: var(–rouge-canada);
+color: #CC0000;
 font-weight: 700;
 margin-bottom: 16px;
 }
@@ -284,7 +284,7 @@ margin: 0 auto 60px;
 /* ============== CARTE ============== */
 .map-wrapper {
 background: var(–blanc-neige);
-border: 1px solid rgba(213, 43, 30, 0.2);
+border: 1px solid rgba(204, 0, 0, 0.2);
 border-radius: 8px;
 padding: 24px;
 box-shadow: 0 20px 60px rgba(26, 22, 18, 0.08);
@@ -304,7 +304,7 @@ flex-wrap: wrap;
 gap: 20px;
 margin-top: 20px;
 padding-top: 20px;
-border-top: 1px dashed rgba(213, 43, 30, 0.25);
+border-top: 1px dashed rgba(204, 0, 0, 0.25);
 justify-content: center;
 font-size: 0.85rem;
 }
@@ -339,8 +339,8 @@ bottom: 0;
 width: 2px;
 background: linear-gradient(to bottom,
 transparent,
-var(–rouge-canada) 5%,
-var(–rouge-canada) 95%,
+#CC0000 5%,
+#CC0000 95%,
 transparent);
 transform: translateX(-50%);
 }
@@ -366,7 +366,7 @@ position: absolute;
 top: 30px;
 width: 56px;
 height: 56px;
-background: var(–rouge-canada);
+background: #CC0000;
 border: 4px solid var(–blanc-creme);
 border-radius: 50%;
 display: flex;
@@ -376,7 +376,7 @@ color: white;
 font-family: ‘Playfair Display’, serif;
 font-weight: 900;
 font-size: 1.3rem;
-box-shadow: 0 6px 20px rgba(213, 43, 30, 0.4);
+box-shadow: 0 6px 20px rgba(204, 0, 0, 0.4);
 z-index: 2;
 }
 
@@ -393,7 +393,7 @@ background: var(–blanc-neige);
 border-radius: 6px;
 overflow: hidden;
 box-shadow: 0 12px 36px rgba(26, 22, 18, 0.08);
-border: 1px solid rgba(213, 43, 30, 0.12);
+border: 1px solid rgba(204, 0, 0, 0.12);
 transition: transform 0.3s ease, box-shadow 0.3s ease;
 text-align: left;
 }
@@ -408,7 +408,7 @@ width: 100%;
 height: 240px;
 object-fit: cover;
 display: block;
-background: linear-gradient(135deg, #d52b1e22, #c89c4a22);
+background: linear-gradient(135deg, #CC000022, #c89c4a22);
 }
 
 .day-content {
@@ -419,7 +419,7 @@ padding: 28px 28px 32px;
 font-size: 0.78rem;
 letter-spacing: 3px;
 text-transform: uppercase;
-color: var(–rouge-canada);
+color: #CC0000;
 font-weight: 700;
 margin-bottom: 8px;
 }
@@ -450,7 +450,7 @@ margin: 16px 0;
 padding: 10px 0 10px 28px;
 position: relative;
 font-size: 0.95rem;
-border-bottom: 1px dashed rgba(213, 43, 30, 0.15);
+border-bottom: 1px dashed rgba(204, 0, 0, 0.15);
 }
 
 .day-activities li:last-child { border-bottom: none; }
@@ -464,7 +464,7 @@ font-size: 0.85rem;
 }
 
 .day-activities strong {
-color: var(–rouge-canada);
+color: #CC0000;
 font-weight: 700;
 }
 
@@ -480,7 +480,7 @@ color: #5a5048;
 
 .day-tip strong {
 font-style: normal;
-color: var(–rouge-canada);
+color: #CC0000;
 letter-spacing: 1px;
 font-size: 0.78rem;
 text-transform: uppercase;
@@ -573,7 +573,7 @@ cursor: pointer;
 
 .excursion:hover {
 transform: translateY(-6px);
-box-shadow: 0 20px 50px rgba(213, 43, 30, 0.15);
+box-shadow: 0 20px 50px rgba(204, 0, 0, 0.15);
 }
 
 .excursion-img {
@@ -592,7 +592,7 @@ display: inline-block;
 font-size: 0.7rem;
 letter-spacing: 2px;
 text-transform: uppercase;
-background: var(–rouge-canada);
+background: #CC0000;
 color: white;
 padding: 4px 10px;
 border-radius: 2px;
@@ -621,7 +621,7 @@ gap: 12px;
 font-size: 0.8rem;
 color: #6b6259;
 padding-top: 14px;
-border-top: 1px dashed rgba(213, 43, 30, 0.18);
+border-top: 1px dashed rgba(204, 0, 0, 0.18);
 }
 
 .excursion-meta span {
@@ -642,7 +642,7 @@ margin-top: 40px;
 background: var(–blanc-neige);
 padding: 28px 26px;
 border-radius: 6px;
-border: 1px solid rgba(213, 43, 30, 0.12);
+border: 1px solid rgba(204, 0, 0, 0.12);
 position: relative;
 transition: all 0.3s ease;
 }
@@ -666,7 +666,7 @@ font-weight: 700;
 border-radius: 2px;
 }
 
-.resto-tag.brunch { background: var(–rouge-canada); }
+.resto-tag.brunch { background: #CC0000; }
 .resto-tag.diner { background: var(–vert-foret); }
 .resto-tag.special { background: var(–noir-encre); }
 
@@ -682,7 +682,7 @@ line-height: 1.15;
 font-size: 0.78rem;
 letter-spacing: 2px;
 text-transform: uppercase;
-color: var(–rouge-canada);
+color: #CC0000;
 margin-bottom: 14px;
 font-weight: 700;
 }
@@ -699,7 +699,7 @@ margin-bottom: 14px;
 display: flex;
 justify-content: space-between;
 padding-top: 14px;
-border-top: 1px dashed rgba(213, 43, 30, 0.2);
+border-top: 1px dashed rgba(204, 0, 0, 0.2);
 font-size: 0.82rem;
 }
 
@@ -725,7 +725,7 @@ margin-top: 40px;
 background: linear-gradient(180deg, var(–blanc-neige) 0%, var(–blanc-creme) 100%);
 padding: 30px 28px;
 border-radius: 6px;
-border-top: 4px solid var(–rouge-canada);
+border-top: 4px solid #CC0000;
 box-shadow: 0 6px 20px rgba(26, 22, 18, 0.05);
 }
 
@@ -752,7 +752,7 @@ padding: 0;
 
 .info-card li {
 padding: 6px 0;
-border-bottom: 1px dashed rgba(213, 43, 30, 0.12);
+border-bottom: 1px dashed rgba(204, 0, 0, 0.12);
 }
 
 .info-card li:last-child { border-bottom: none; }
@@ -819,7 +819,7 @@ padding: 12px 14px;
 font-family: ‘Playfair Display’, serif;
 font-weight: 700;
 font-size: 1.05rem;
-color: var(–rouge-canada);
+color: #CC0000;
 margin-bottom: 4px;
 }
 
@@ -832,7 +832,7 @@ line-height: 1.4;
 .popup-links {
 margin-top: 10px;
 padding-top: 10px;
-border-top: 1px dashed rgba(213, 43, 30, 0.2);
+border-top: 1px dashed rgba(204, 0, 0, 0.2);
 display: flex;
 gap: 6px;
 flex-wrap: wrap;
@@ -849,7 +849,7 @@ font-weight: 600;
 transition: all 0.2s ease;
 }
 .popup-link:hover {
-background: var(–rouge-canada);
+background: #CC0000;
 }
 
 ```
@@ -866,7 +866,7 @@ font-weight: 700;
 
 /* Marqueurs personnalisés */
 .custom-marker {
-background: var(–rouge-canada);
+background: #CC0000;
 width: 32px;
 height: 32px;
 border-radius: 50% 50% 50% 0;
@@ -879,7 +879,7 @@ justify-content: center;
 }
 
 .custom-marker.lodging { background: var(–noir-encre); }
-.custom-marker.activity { background: var(–rouge-canada); }
+.custom-marker.activity { background: #CC0000; }
 .custom-marker.restaurant { background: var(–or-erable); }
 .custom-marker.nature { background: var(–vert-foret); }
 
@@ -1010,14 +1010,14 @@ min-width: 180px;
 position: fixed;
 bottom: 20px;
 right: 20px;
-background: var(–rouge-canada);
+background: #CC0000;
 color: white;
 width: 56px;
 height: 56px;
 border-radius: 50%;
 border: none;
 cursor: pointer;
-box-shadow: 0 6px 20px rgba(213, 43, 30, 0.4);
+box-shadow: 0 6px 20px rgba(204, 0, 0, 0.4);
 z-index: 100;
 font-size: 1.4rem;
 transition: transform 0.3s ease;
@@ -1030,7 +1030,7 @@ position: fixed;
 bottom: 90px;
 right: 20px;
 background: var(–blanc-neige);
-border: 1px solid rgba(213, 43, 30, 0.2);
+border: 1px solid rgba(204, 0, 0, 0.2);
 border-radius: 6px;
 box-shadow: 0 10px 40px rgba(0,0,0,0.15);
 padding: 12px 0;
@@ -1054,12 +1054,12 @@ padding: 10px 18px;
 color: var(–noir-encre);
 text-decoration: none;
 font-size: 0.88rem;
-border-bottom: 1px dashed rgba(213, 43, 30, 0.12);
+border-bottom: 1px dashed rgba(204, 0, 0, 0.12);
 transition: background 0.2s ease;
 }
 .toc-menu a:hover {
 background: var(–blanc-creme);
-color: var(–rouge-canada);
+color: #CC0000;
 }
 .toc-menu a:last-child { border-bottom: none; }
 
@@ -1110,7 +1110,7 @@ box-shadow: 0 3px 10px rgba(0,0,0,0.2);
 }
 .quicknav-pill.main .qico { font-size: 1rem; }
 .quicknav-pill.main .qtxt { color: #ffffff; font-weight: 600; }
-.quicknav-pill.main:hover { background: #d52b1e; transform: translateY(-2px); }
+.quicknav-pill.main:hover { background: #CC0000; transform: translateY(-2px); }
 
 /* Feuilles d’érable — JOURS */
 .quicknav-section.days .quicknav-pills {
@@ -1133,7 +1133,7 @@ background: #1a1612;
 transition: all 0.25s ease;
 clip-path: polygon(50% 0%,62% 18%,80% 12%,72% 32%,92% 38%,78% 50%,100% 60%,78% 64%,70% 82%,55% 72%,50% 100%,45% 72%,30% 82%,22% 64%,0% 60%,22% 50%,8% 38%,28% 32%,20% 12%,38% 18%);
 }
-.leaf-pill:hover { background: #d52b1e; transform: scale(1.08) rotate(-3deg); }
+.leaf-pill:hover { background: #CC0000; transform: scale(1.08) rotate(-3deg); }
 .leaf-pill .leaf-day {
 font-family: ‘Playfair Display’, serif;
 font-weight: 900;
@@ -1195,8 +1195,8 @@ align-items: center;
 justify-content: center;
 transition: all 0.25s ease;
 }
-.float-nav-toggle:hover { transform: scale(1.08); background: #d52b1e; }
-.float-nav-toggle.open { transform: rotate(90deg); background: #d52b1e; }
+.float-nav-toggle:hover { transform: scale(1.08); background: #CC0000; }
+.float-nav-toggle.open { transform: rotate(90deg); background: #CC0000; }
 
 .float-nav-panel {
 position: absolute;
@@ -1250,7 +1250,7 @@ font-size: 0.78rem;
 font-weight: 600;
 transition: all 0.2s ease;
 }
-.float-nav-link:hover { background: #d52b1e; }
+.float-nav-link:hover { background: #CC0000; }
 .float-nav-days {
 display: grid;
 grid-template-columns: repeat(3, 1fr);
@@ -1268,7 +1268,7 @@ line-height: 1.15;
 transition: all 0.2s ease;
 font-weight: 600;
 }
-.float-nav-day:hover { background: #d52b1e; transform: scale(1.05); }
+.float-nav-day:hover { background: #CC0000; transform: scale(1.05); }
 .float-nav-day strong {
 display: block;
 font-family: ‘Playfair Display’, serif;
@@ -1278,6 +1278,72 @@ margin-bottom: 1px;
 color: #ffffff;
 }
 .float-nav-day small { font-size: 0.6rem; opacity: 0.9; color: #ffffff; }
+
+/* ============== COMPTEUR ============== */
+.countdown {
+margin-top: 32px;
+padding: 20px 28px;
+background: rgba(0, 0, 0, 0.35);
+border: 1px solid rgba(255, 255, 255, 0.35);
+border-radius: 10px;
+display: inline-block;
+min-width: 300px;
+}
+.countdown-label {
+font-family: ‘Cormorant Garamond’, serif;
+font-style: italic;
+font-size: 0.9rem;
+letter-spacing: 1px;
+color: rgba(255, 255, 255, 0.95);
+margin-bottom: 14px;
+text-align: center;
+display: block;
+}
+.countdown-grid {
+display: flex;
+flex-direction: row;
+align-items: flex-end;
+justify-content: center;
+gap: 8px;
+}
+.countdown-cell {
+display: flex;
+flex-direction: column;
+align-items: center;
+min-width: 64px;
+}
+.countdown-num {
+font-family: ‘Playfair Display’, serif;
+font-size: 2.6rem;
+font-weight: 900;
+color: #ffffff;
+line-height: 1;
+display: block;
+font-variant-numeric: tabular-nums;
+}
+.countdown-unit {
+font-size: 0.62rem;
+letter-spacing: 2px;
+text-transform: uppercase;
+color: rgba(255, 255, 255, 0.88);
+margin-top: 4px;
+display: block;
+text-align: center;
+}
+.countdown-sep {
+font-size: 2rem;
+color: rgba(255, 255, 255, 0.5);
+line-height: 1;
+margin-bottom: 18px;
+flex-shrink: 0;
+}
+@media (max-width: 480px) {
+.countdown { padding: 16px 18px; min-width: 260px; }
+.countdown-num { font-size: 2rem; }
+.countdown-unit { font-size: 0.55rem; }
+.countdown-sep { font-size: 1.5rem; margin-bottom: 14px; }
+.countdown-cell { min-width: 52px; }
+}
 
 </style>
 </head>
@@ -1301,13 +1367,22 @@ color: #ffffff;
 
 ```
 <div class="countdown" id="countdown" aria-label="Décompte avant le départ">
-  <div class="countdown-label">Décompte avant le départ de Nice</div>
+  <div class="countdown-label">Décompte avant le départ de Nice ✈️</div>
   <div class="countdown-grid">
-    <div class="countdown-cell"><span class="countdown-num" id="cd-days">--</span><span class="countdown-unit">Jours</span></div>
+    <div class="countdown-cell">
+      <span class="countdown-num" id="cd-days">--</span>
+      <span class="countdown-unit">Jours</span>
+    </div>
     <div class="countdown-sep">·</div>
-    <div class="countdown-cell"><span class="countdown-num" id="cd-hours">--</span><span class="countdown-unit">Heures</span></div>
+    <div class="countdown-cell">
+      <span class="countdown-num" id="cd-hours">--</span>
+      <span class="countdown-unit">Heures</span>
+    </div>
     <div class="countdown-sep">·</div>
-    <div class="countdown-cell"><span class="countdown-num" id="cd-mins">--</span><span class="countdown-unit">Minutes</span></div>
+    <div class="countdown-cell">
+      <span class="countdown-num" id="cd-mins">--</span>
+      <span class="countdown-unit">Minutes</span>
+    </div>
   </div>
 </div>
 ```
@@ -1354,7 +1429,7 @@ color: #ffffff;
     <div id="voyageMap"></div>
     <div class="map-legend">
       <div class="legend-item"><span class="legend-dot" style="background:#1a1612"></span>Hébergement</div>
-      <div class="legend-item"><span class="legend-dot" style="background:#d52b1e"></span>Activité / Sensation</div>
+      <div class="legend-item"><span class="legend-dot" style="background:#CC0000"></span>Activité / Sensation</div>
       <div class="legend-item"><span class="legend-dot" style="background:#2d4a2b"></span>Nature</div>
       <div class="legend-item"><span class="legend-dot" style="background:#c89c4a"></span>Restaurant</div>
     </div>
@@ -2337,7 +2412,7 @@ color: #ffffff;
     [46.8131, -71.2075]  // Québec
   ];
   L.polyline(itineraryLine, {
-    color: '#d52b1e',
+    color: '#CC0000',
     weight: 3,
     opacity: 0.6,
     dashArray: '8, 8'
