@@ -26,7 +26,7 @@
 
 body {
 font-family: ‘DM Sans’, sans-serif;
-background: var(–blanc-creme);
+background: #f0e9d6;
 color: var(–noir-encre);
 line-height: 1.6;
 overflow-x: hidden;
@@ -471,7 +471,7 @@ font-weight: 700;
 .day-tip {
 margin-top: 20px;
 padding: 14px 16px;
-background: var(–blanc-creme);
+background: #f0e9d6;
 border-left: 3px solid var(–or-erable);
 font-size: 0.88rem;
 font-style: italic;
@@ -502,7 +502,7 @@ display: inline-flex;
 align-items: center;
 gap: 6px;
 padding: 6px 12px;
-background: var(–blanc-creme);
+background: #f0e9d6;
 border: 1px solid rgba(213, 43, 30, 0.25);
 border-radius: 20px;
 font-size: 0.78rem;
@@ -855,6 +855,20 @@ font-size: 14px;
 .section { padding: 70px 0; }
 #voyageMap { height: 480px; }
 .day-image { height: 220px; }
+/* Timeline centrée sur tablette */
+.timeline::before { left: 28px; }
+.day, .day:nth-child(odd), .day:nth-child(even) {
+width: 100%;
+margin-left: 0;
+padding-left: 72px;
+padding-right: 0;
+text-align: left;
+}
+.day:nth-child(odd) .day-marker,
+.day:nth-child(even) .day-marker {
+left: 0px;
+right: auto;
+}
 }
 
 /* Tablettes portrait étroit / grands smartphones */
@@ -1016,7 +1030,7 @@ border-bottom: 1px dashed rgba(213, 43, 30, 0.12);
 transition: background 0.2s ease;
 }
 .toc-menu a:hover {
-background: var(–blanc-creme);
+background: #f0e9d6;
 color: var(–rouge-canada);
 }
 .toc-menu a:last-child { border-bottom: none; }
@@ -1604,7 +1618,7 @@ opacity: 0.92;
 /* Pastilles liens site/maps */
 .link-pill {
 display: inline-flex; align-items: center; gap: 6px; padding: 7px 13px;
-background: var(–blanc-creme); border: 1.5px solid var(–noir-encre);
+background: #f0e9d6; border: 1.5px solid var(–noir-encre);
 border-radius: 20px; font-size: 0.8rem; color: var(–noir-encre);
 text-decoration: none; font-weight: 600; transition: all 0.2s ease; white-space: nowrap;
 }
@@ -1640,7 +1654,7 @@ section[id] { scroll-margin-top: 20px; }
     <div class="cover-dates">3 — 11 Juillet 2026</div>
     <div class="cover-meta">Montréal · Laurentides · Trois-Rivières · Québec</div>
     <div class="countdown" id="countdown">
-      <div class="countdown-label">✈️ Décompte avant le départ de Nice</div>
+      <div class="countdown-label">✈️ Début de l'aventure dans</div>
       <div class="countdown-grid">
         <div class="countdown-cell"><span class="countdown-num" id="cd-days">--</span><span class="countdown-unit">Jours</span></div>
         <div class="countdown-sep">·</div>
@@ -1915,7 +1929,7 @@ section[id] { scroll-margin-top: 20px; }
       <h3 class="day-title">Pancakes japonais, chute libre & shopping</h3>
       <p class="day-summary">Petit-déjeuner au Fuwa Fuwa, simulateur en début d'après-midi à Laval, puis retour à Montréal pour shopping et dernière soirée.</p>
       <ul class="day-activities">
-        <li><strong>9h30</strong> — Petit-déjeuner chez <strong>Fuwa Fuwa Pancakes</strong> (976 boul. Saint-Laurent) — pancakes japonais soufflés, expérience unique</li>
+        <li><strong>9h30</strong> — Petit-déjeuner chez <strong>Fuwa Fuwa Pancakes</strong> (1440 rue Sainte-Catherine) — pancakes japonais soufflés, expérience unique</li>
         <li><strong>11h00</strong> — Route vers Laval (~30 min)</li>
         <li><strong>12h00</strong> — <strong>iFLY Montréal</strong> à Laval — premier rendez-vous, simulateur de chute libre (forfait famille ~80 $/pers, dès 4 ans)</li>
         <li><strong>14h00</strong> — Route retour vers Montréal</li>
@@ -2203,11 +2217,11 @@ section[id] { scroll-margin-top: 20px; }
 <div class="resto">
   <span class="resto-tag brunch">Petit-déj original</span>
   <h3 class="resto-name"><a class="title-link" href="https://www.fuwafuwapancakes.com/fr/canada/" target="_blank" rel="noopener">Fuwa Fuwa Pancakes</a></h3>
-  <div class="resto-area">Boul. Saint-Laurent · Montréal</div>
+  <div class="resto-area">1440 rue Sainte-Catherine · Montréal</div>
   <p class="resto-desc">Pancakes japonais soufflés — moelleux, légers comme un nuage. Une expérience unique pour les enfants.</p>
   <div class="link-row">
     <a class="link-pill" href="https://www.fuwafuwapancakes.com/fr/canada/" target="_blank" rel="noopener"><span class="ico">🌐</span> Site officiel</a>
-    <a class="link-pill" href="https://www.google.com/maps/search/?api=1&query=Fuwa+Fuwa+Pancakes+976+Saint-Laurent+Montreal" target="_blank" rel="noopener"><span class="ico">📍</span> Google Maps</a>
+    <a class="link-pill" href="https://www.google.com/maps/search/?api=1&query=Fuwa+Fuwa+Pancakes+1440+Sainte-Catherine+Montreal" target="_blank" rel="noopener"><span class="ico">📍</span> Google Maps</a>
   </div>
   <div class="resto-details">
     <span class="resto-price">~20 €/pers</span>
@@ -2408,7 +2422,7 @@ section[id] { scroll-margin-top: 20px; }
     // RESTAURANTS
     { name: 'Arthurs Nosh Bar', coords: [45.4790, -73.5860], type: 'restaurant', emoji: '🥞', img: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400', desc: 'Pancakes les plus réputés de Montréal. Saint-Henri.', meta: 'Brunch culte', url: 'https://www.arthursnoshbar.com/' },
     { name: 'Dandy', coords: [45.5042, -73.5605], type: 'restaurant', emoji: '🥞', img: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400', desc: 'Pancakes à la ricotta, lieu lumineux. Vieux-Montréal.', meta: 'Brunch chic', url: 'https://www.dandymtl.com/' },
-    { name: 'Fuwa Fuwa Pancakes', coords: [45.5126, -73.5726], type: 'restaurant', emoji: '🥞', img: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400', desc: 'Pancakes japonais soufflés — 976 boul. Saint-Laurent.', meta: 'Petit-déj original', url: 'https://www.fuwafuwapancakes.com/fr/canada/' },
+    { name: 'Fuwa Fuwa Pancakes', coords: [45.5126, -73.5726], type: 'restaurant', emoji: '🥞', img: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400', desc: 'Pancakes japonais soufflés — 1440 rue Sainte-Catherine.', meta: 'Petit-déj original', url: 'https://www.fuwafuwapancakes.com/fr/canada/' },
     { name: 'St-Viateur Bagel', coords: [45.5226, -73.5995], type: 'restaurant', emoji: '🥯', img: 'https://images.unsplash.com/photo-1600885282098-6c47ec0badba?w=400', desc: 'Bagels mythiques au four à bois 24/7 depuis 1957. Mile End.', meta: 'Snack culte', url: 'https://stviateurbagel.com/fr' },
     { name: 'Fairmount Bagel', coords: [45.5232, -73.6020], type: 'restaurant', emoji: '🥯', img: 'https://images.unsplash.com/photo-1600885282098-6c47ec0badba?w=400', desc: 'L\'autre temple du bagel — la rivalité historique du Mile End depuis 1919.', meta: 'Snack culte', url: 'https://fairmountbagel.com/?lang=fr' },
     { name: 'Modavie', coords: [45.5060, -73.5538], type: 'restaurant', emoji: '🎷', img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400', desc: 'Bistro français avec jazz live tous les soirs. Vieux-Montréal.', meta: 'Soir', url: 'https://www.modavie.com/' },
@@ -2416,7 +2430,10 @@ section[id] { scroll-margin-top: 20px; }
     { name: 'Bevo Pizzeria', coords: [45.5067, -73.5532], type: 'restaurant', emoji: '🍕', img: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400', desc: 'Pizzas au feu de bois, pâte fraîche. Vieux-Montréal.', meta: 'Soir famille', url: 'https://bevopizzeria.com/' },
     { name: 'La Belle et La Boeuf', coords: [45.5550, -73.7521], type: 'restaurant', emoji: '🍔', img: 'https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400', desc: 'Burgers gourmets, frites maison. À deux pas d\'iFLY au Centropolis.', meta: 'Déjeuner Laval', url: 'https://belleetboeuf.com/fr/restaurants/laval-centropolis' },
     { name: 'Bistro Chez Boulay', coords: [46.8156, -71.2076], type: 'restaurant', emoji: '🍴', img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400', desc: 'Cuisine boréale — Jean-Luc Boulay. Terroir québécois. Québec.', meta: 'Soir Québec', url: 'https://www.chezboulay.com/' },
-    { name: 'Le Bello Ristorante', coords: [46.8130, -71.2068], type: 'restaurant', emoji: '🍝', img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400', desc: 'Italien historique — maison de 1760, à 2 pas du Château Frontenac.', meta: 'Soir Québec', url: 'https://www.bello.ca/' }
+    { name: 'Le Bello Ristorante', coords: [46.8130, -71.2068], type: 'restaurant', emoji: '🍝', img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d?w=400', desc: 'Italien historique — maison de 1760, à 2 pas du Château Frontenac.', meta: 'Soir Québec', url: 'https://www.bello.ca/' },
+    // LIEU PERSONNEL
+    { name: 'Chez Alex & Claudy', coords: [45.5536, -73.5561], type: 'lodging', emoji: '🏠', img: 'https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=400', desc: '7183 Pierre de Coubertin, Montréal. La maison familiale !', meta: 'Visite', url: 'https://www.google.com/maps/search/?api=1&query=7183+Pierre+de+Coubertin+Montreal' },
+    { name: 'Fuwa Fuwa Pancakes', coords: [45.4942, -73.5785], type: 'restaurant', emoji: '🥞', img: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?w=400', desc: '1440 rue Sainte-Catherine — pancakes japonais soufflés, expérience unique.', meta: 'Petit-déj original', url: 'https://www.fuwafuwapancakes.com/fr/canada/' }
   ];
 
   // Ajout des marqueurs
